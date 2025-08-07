@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Cloudn8tive | AI Observability, Human-in-the-Loop & SRE Services</title>
+    <meta name="description" content="Cloudn8tive de-risks your AI adoption with expert services in AI observability, Human-in-the-Loop (HITL), SRE, and human-run disaster recovery. UK-based expertise with global delivery.">
+    <meta name="keywords" content="AI observability, Human-in-the-Loop, HITL, SRE for AI, AI disaster recovery, BPO services Philippines, AI services UK, Cloudn8tive">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/flavicon.png" type="image/png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GLM3MKHW6G"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GLM3MKHW6G');
+    </script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark Gray */
+            color: #F3F4F6; /* Light Gray */
+        }
+        .brand-green { color: #4ade80; }
+        .bg-brand-green { background-color: #4ade80; }
+        .border-brand-green { border-color: #4ade80; }
+        .accent-brand-green { accent-color: #4ade80; }
+        .hero-bg {
+            background-color: #111827;
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+        .partner-logo {
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            max-height: 60px;
+            max-width: 180px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        .partner-logo:hover {
+            opacity: 1;
+        }
+        .brand-logo {
+            filter: brightness(0) saturate(100%) invert(71%) sepia(56%) saturate(464%) hue-rotate(92deg) brightness(96%) contrast(89%);
+        }
+        .psc-logo {
+            filter: brightness(0) saturate(100%) invert(71%) sepia(56%) saturate(464%) hue-rotate(92deg) brightness(96%) contrast(89%);
+        }
+        .modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal-content {
+            transition: transform 0.3s ease;
+        }
+    </style>
+
+    <!-- JSON-LD Schema Markup for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Cloudn8tive",
+      "url": "https://www.cloudn8tive.com",
+      "logo": "https://placehold.co/400x128/111827/FFFFFF?text=Cloudn8tive&font=inter",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "",
+        "contactType": "customer service",
+        "email": "info@cloudn8tive.com"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB",
+        "addressLocality": "London"
+      },
+      "sameAs": []
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "AI Observability & Human-in-the-Loop Services",
+      "provider": {
+        "@type": "Organization",
+        "name": "Cloudn8tive"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      "description": "Cloudn8tive provides expert services in AI observability, Human-in-the-Loop (HITL), SRE, and human-run disaster recovery to de-risk AI adoption.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Cloudn8tive Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI & LLM Observability" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Human-in-the-Loop (HITL) Services" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Human-Run Disaster Recovery (DR)" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manned AI Sandboxes" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Managed BPO Services" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "DevOps, SRE & Platform Engineering" } }
+        ]
+      }
+    }
+    </script>
+
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="images/Color logo - no background.png" alt="Cloudn8tive Logo" class="h-12 md:h-14 w-auto brand-logo" onerror="this.onerror=null;this.src='https://placehold.co/400x128/111827/FFFFFF?text=Cloudn8tive';">
+            </a>
+            <a href="#contact" class="hidden md:inline-block bg-brand-green text-gray-900 font-bold py-2 px-5 rounded-lg hover:bg-green-400 transition-colors">
+                Book a Call
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg pt-32 pb-20 md:pt-48 md:pb-32 text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight">
+                    AI is Powerful. <span class="brand-green">We Make it Safe.</span>
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-300">
+                    We provide the essential layer of AI observability, human oversight, and operational resilience to ensure your AI initiatives deliver real business value, securely and reliably.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#contact" class="w-full sm:w-auto bg-brand-green text-gray-900 font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-400 transition-all transform hover:scale-105">
+                        Book a Free Consultation
+                    </a>
+                    <a href="#services" class="w-full sm:w-auto bg-transparent border-2 border-brand-green text-brand-green font-bold py-3 px-8 rounded-lg text-lg hover:bg-brand-green hover:text-gray-900 transition-colors">
+                        Explore Our Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Adoption Challenge Section -->
+        <section class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Navigating the AI Adoption Challenge</h2>
+                    <p class="mt-4 text-gray-400 max-w-2xl mx-auto">AI presents incredible opportunities, but comes with a new class of complex risks. We help you overcome them.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-gray-900 p-8 rounded-xl shadow-lg">
+                        <i class="fas fa-box-open text-4xl brand-green mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">The Black Box Problem</h3>
+                        <p class="text-gray-400">AI systems can be opaque and unpredictable. Without deep visibility, troubleshooting failures, controlling costs, and preventing issues like bias or hallucinations is a constant struggle.</p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-xl shadow-lg">
+                        <i class="fas fa-shield-alt text-4xl brand-green mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">The Reliability Gap</h3>
+                        <p class="text-gray-400">Migrating critical systems to AI introduces new failure modes. Standard DevOps and DR practices are often insufficient, exposing your business to significant operational and financial risk.</p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-xl shadow-lg">
+                        <i class="fas fa-users text-4xl brand-green mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">The Human Bottleneck</h3>
+                        <p class="text-gray-400">Pure automation has its limits. High-stakes decisions, nuanced customer interactions, and ethical judgments require expert human oversight to ensure accuracy, compliance, and trust.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Our Integrated Solutions</h2>
+                    <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Technology and expertise, unified to de-risk your AI journey.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Cards will be injected here by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- People, Skills, Culture Section -->
+        <section class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-center lg:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white">People, Skills, Culture</h2>
+                        <p class="mt-4 text-lg text-gray-300">At Cloudn8tive, our greatest asset is our team. We believe that the most resilient and effective systems are built and managed by fostering a culture of unwavering excellence.</p>
+                        <div class="mt-8 space-y-6">
+                            <div>
+                                <h3 class="text-xl font-bold brand-green">People</h3>
+                                <p class="text-gray-400 mt-1">We invest in, attract, and retain top-tier talent in the UK and the Philippines, creating a diverse, collaborative, and truly global team.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold brand-green">Skills</h3>
+                                <p class="text-gray-400 mt-1">We champion continuous learning, ensuring our engineers are masters of the latest platforms and best practices in AI, SRE, and cloud-native development.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold brand-green">Culture</h3>
+                                <p class="text-gray-400 mt-1">We cultivate a culture of ownership, deep accountability, and proactive problem-solving. This empowers our people to provide the exceptional service our clients depend on.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <img src="images/Color logo PSC- no background.png" alt="People, Skills, Culture" class="max-w-xs md:max-w-sm lg:max-w-md w-full h-auto psc-logo" onerror="this.onerror=null;this.src='https://placehold.co/400x300/1F2937/4ADE80?text=PSC';">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Trusted Technology Partners Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-white">Leveraging Best-in-Class Technology</h2>
+                    <p class="mt-3 text-gray-400">We partner with the world's leading observability and cloud platforms.</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-4 gap-x-2 gap-y-6 items-center">
+                    <div class="flex justify-center">
+                        <a href="https://www.datadoghq.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="images/pngaaa.com-1486415.png" alt="Datadog Logo" class="partner-logo" onerror="this.onerror=null;this.src='https://placehold.co/200x50/111827/FFFFFF?text=Datadog';">
+                        </a>
+                    </div>
+                    <div class="flex justify-center">
+                        <a href="https://coralogix.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="images/Coralogix-green-horizontal.png" alt="Coralogix Logo" class="partner-logo" onerror="this.onerror=null;this.src='https://placehold.co/200x50/111827/FFFFFF?text=Coralogix';">
+                        </a>
+                    </div>
+                    <div class="flex justify-center">
+                        <a href="https://opentelemetry.io/" target="_blank" rel="noopener noreferrer">
+                            <img src="images/pngaaa.com-5125583.png" alt="OpenTelemetry Logo" class="partner-logo" onerror="this.onerror=null;this.src='https://placehold.co/200x50/111827/FFFFFF?text=OpenTelemetry';">
+                        </a>
+                    </div>
+                    <div class="flex justify-center">
+                        <a href="https://www.servicenow.com/products/observability.html" target="_blank" rel="noopener noreferrer">
+                            <img src="images/Daco_5435433.png" alt="ServiceNow Logo" class="partner-logo" onerror="this.onerror=null;this.src='https://placehold.co/200x50/111827/FFFFFF?text=ServiceNow';">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-gray-800">
+             <div class="container mx-auto px-6 grid md:grid-cols-5 gap-12 items-center">
+                <div class="md:col-span-3">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">About Cloudn8tive</h2>
+                    <p class="mt-6 text-gray-300">
+                        Cloudn8tive was founded on a simple but critical principle: to make AI adoption safe, reliable, and successful for every business. In a world rushing towards full automation, we saw the clear and growing need for a partner that could bridge the gap between technology's immense potential and the complex realities of operational excellence.
+                    </p>
+                    <p class="mt-4 text-gray-300">
+                        We are a team of seasoned platform engineers, SREs, and AI specialists who understand that even the most advanced systems require human insight to be truly effective. Headquartered in the United Kingdom and with our core BPO services based in the Philippines, we offer a unique blend of high-level strategic oversight and scalable, world-class talent. We are your trusted partner in navigating the complexities of the AI-driven future.
+                    </p>
+                </div>
+                <div class="md:col-span-2 bg-gray-900 p-8 rounded-xl shadow-lg">
+                     <h3 class="text-2xl font-bold text-white mb-4">The Best of Both Worlds</h3>
+                     <p class="text-gray-400">Our unique structure gives you a powerful advantage.</p>
+                     <div class="mt-6 space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt brand-green mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-white">Strategic UK Leadership</h4>
+                                <p class="text-gray-400 text-sm">Local accountability, strategic partnership, and clear, unambiguous communication.</p>
+                            </div>
+                        </div>
+                         <div class="flex items-start">
+                            <i class="fas fa-globe-asia brand-green mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-white">World-Class Global Delivery</h4>
+                                <p class="text-gray-400 text-sm">Cost-effective, highly-skilled BPO and HITL services from the Philippines.</p>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+             </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden">
+                    <div class="grid lg:grid-cols-2">
+                        <div class="p-8 md:p-12">
+                            <h2 class="text-3xl md:text-4xl font-bold text-white">Ready to De-Risk Your AI Journey?</h2>
+                            <p class="mt-4 text-gray-300">Let's discuss how Cloudn8tive can bring reliability, governance, and confidence to your AI systems. Fill out the form to book a no-obligation consultation.</p>
+                            
+                            <form id="contact-form" class="mt-8 space-y-6">
+                                <div>
+                                    <label for="name" class="sr-only">Full Name</label>
+                                    <input type="text" name="name" id="name" placeholder="Full Name" required class="w-full bg-gray-700 border-gray-600 rounded-md p-3 text-white focus:ring-brand-green focus:border-brand-green">
+                                </div>
+                                <div>
+                                    <label for="phone" class="sr-only">Phone Number</label>
+                                    <input type="tel" name="phone" id="phone" placeholder="Phone Number" class="w-full bg-gray-700 border-gray-600 rounded-md p-3 text-white focus:ring-brand-green focus:border-brand-green">
+                                </div>
+                                <div>
+                                    <label for="email" class="sr-only">Work Email</label>
+                                    <input type="email" name="email" id="email" placeholder="Work Email" required class="w-full bg-gray-700 border-gray-600 rounded-md p-3 text-white focus:ring-brand-green focus:border-brand-green">
+                                </div>
+                                <div>
+                                    <label for="company" class="sr-only">Company</label>
+                                    <input type="text" name="company" id="company" placeholder="Company" class="w-full bg-gray-700 border-gray-600 rounded-md p-3 text-white focus:ring-brand-green focus:border-brand-green">
+                                </div>
+                                <div>
+                                    <label for="message" class="sr-only">How can we help?</label>
+                                    <textarea name="message" id="message" rows="4" placeholder="How can we help?" required class="w-full bg-gray-700 border-gray-600 rounded-md p-3 text-white focus:ring-brand-green focus:border-brand-green"></textarea>
+                                </div>
+                                <div>
+                                    <button type="submit" class="w-full bg-brand-green text-gray-900 font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-400 transition-all transform hover:scale-105">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </form>
+                            <div id="form-feedback" class="mt-4 text-center"></div>
+                        </div>
+                        <div class="bg-gray-900 p-8 md:p-12 flex flex-col justify-center">
+                            <h3 class="text-2xl font-bold text-white">Contact Information</h3>
+                            <div class="mt-6 space-y-4 text-gray-300">
+                                <p class="flex items-center">
+                                    <i class="fas fa-envelope w-6 mr-3 brand-green"></i>
+                                    <a href="mailto:info@cloudn8tive.com" class="hover:text-brand-green">info@cloudn8tive.com</a>
+                                </p>
+                                <p class="flex items-center">
+                                    <i class="fas fa-map-marker-alt w-6 mr-3 brand-green"></i>
+                                    <span>HQ: London, United Kingdom</span>
+                                </p>
+                                <p class="flex items-center">
+                                    <i class="fas fa-globe w-6 mr-3 brand-green"></i>
+                                    <span>Global Ops: Manila, Philippines</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="images/Color logo - no background.png" alt="Cloudn8tive Logo" class="h-8 w-auto mr-3 opacity-70 brand-logo" onerror="this.onerror=null;this.src='https://placehold.co/64x64/111827/4ADE80?text=C8';">
+                    <p class="text-gray-400">&copy; 2025 Cloudn8tive LLP. All Rights Reserved.</p>
+                </div>
+                <div class="flex items-center space-x-6 text-gray-400">
+                    <button type="button" id="privacy-policy-link" class="hover:text-white transition-colors bg-transparent border-none cursor-pointer">Privacy Policy</button>
+                    <button type="button" id="terms-link" class="hover:text-white transition-colors bg-transparent border-none cursor-pointer">Terms of Service</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Service Modal Container -->
+    <div id="modal-container"></div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-policy-modal" class="modal fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 invisible opacity-0">
+        <div class="modal-content bg-gray-800 rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform scale-95">
+            <div class="sticky top-0 bg-gray-800/80 backdrop-blur-sm p-6 flex justify-between items-center border-b border-gray-700">
+                <h2 class="text-2xl font-bold text-white">Privacy Policy</h2>
+                <button class="close-modal text-gray-400 hover:text-white text-2xl">&times;</button>
+            </div>
+            <div class="p-8">
+                <p class="text-gray-400 mb-6"><strong>Last updated:</strong> January 2025</p>
+                
+                <div class="space-y-6 text-gray-300">
+                    <section>
+                        <h3 class="text-xl font-bold text-white mb-3">1. Information We Collect</h3>
+                        <div class="space-y-3">
+                            <p><strong class="brand-green">Business Information:</strong> Company name, contact details, and business requirements when you request our services.</p>
+                            <p><strong class="brand-green">Technical Data:</strong> Through our AI observability services, we may collect system performance metrics, logs, and operational data necessary to provide our services.</p>
+                            <p><strong class="brand-green">Communication Records:</strong> Correspondence related to our BPO and HITL services, including support interactions and service delivery communications.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 class="text-xl font-bold text-white mb-3">2. How We Use Your Information</h3>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li>Provide AI observability, HITL, and BPO services</li>
+                            <li>Monitor and improve system performance and reliability</li>
+                            <li>Communicate about service delivery and support</li>
+                            <li>Comply with legal and regulatory requirements</li>
+                            <li>Detect and prevent security incidents</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3 class="text-xl font-bold text-white mb-3">3. Data Security & AI Services</h3>
+                        <p>Given our expertise in AI observability and human oversight services, we implement enterprise-grade security measures including:</p>
+                        <ul class="space-y-2 list-disc list-inside mt-3">
+                            <li>End-to-end encryption for all data transmissions</li>
+                            <li>Secure data processing facilities in the UK and Philippines</li>
+                            <li>Regular security audits and compliance assessments</li>
+                            <li>Staff training on data protection and AI ethics</li>
+                            <li>Incident response procedures for data breaches</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3 class="text-xl font-bold text-white mb-3">4. International Data Transfers</h3>
+                        <p>As we operate from both the UK and Philippines, data may be processed in either location. We ensure adequate protection through:</p>
+                        <ul class="space-y-2 list-disc list-inside mt-3">
+                            <li>Standard contractual clauses for international transfers</li>
+                            <li>Regular assessments of data protection standards</li>
+                            <li>Compliance with UK GDPR and relevant Philippine data protection laws</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3 class="text-xl font-bold text-white mb-3">5. Your Rights</h3>
+                        <p>You have the right to:</p>
+                        <ul class="space-y-2 list-disc list-inside mt-3">
+                            <li>Access your personal data</li>
+                            <li>Correct inaccurate information</li>
+                            <li>Request deletion of your data</li>
+                            <li>Object to processing</li>
+                            <li>Data portability</li>
+                            <li>Withdraw consent at any time</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3 class="text-xl font-bold text-white mb-3">6. Contact Us</h3>
+                        <p>For privacy-related inquiries, contact our Data Protection Officer at:</p>
+                        <p class="mt-2"><strong class="brand-green">Email:</strong> privacy@cloudn8tive.com</p>
+                        <p><strong class="brand-green">Address:</strong> Cloudn8tive LLP, London, United Kingdom</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div id="terms-modal" class="modal fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 invisible opacity-0">
+        <div class="modal-content bg-gray-800 rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform scale-95">
+            <div class="sticky top-0 bg-gray-800/80 backdrop-blur-sm p-6 flex justify-between items-center border-b border-gray-700">
+                <h2 class="text-2xl font-bold text-white">Terms of Service</h2>
+                <button class="close-modal text-gray-400 hover:text-white text-2xl">&times;</button>
+            </div>
+            <div class="p-8">
+                <p class="text-gray-400 mb-6"><strong>Last updated:</strong> January 2025</p>
+                
+                <div class="space-y-6 text-gray-300">
+                    <section>
+                        <h3 class="text-xl font-bold text-white mb-3">1. Service Description</h3>
+                        <p>Cloudn8tive LLP provides:</p>
+                        <ul class="space-y-2 list-disc list-inside mt-3">
+                            <li><strong class="brand-green">AI & LLM Observability:</strong> Monitoring, analytics, and optimization services for AI systems</li>
+                            <li><strong class="brand-green">Human-in-the-Loop (HITL):</strong> Human oversight and validation services for AI outputs</li>
+                            <li><strong class="brand-green">Human-Run Disaster Recovery:</strong> Expert-led disaster recovery services for AI systems</li>
+                            <li><strong class="brand-green">BPO Services:</strong> Business process outsourcing from our Philippines operations</li>
+                            <li><strong class="brand-green">DevOps & SRE:</strong> Platform engineering and site reliability services</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3 class="text-xl font-bold text-white mb-3">2. Service Level Agreements</h3>
+                        <div class="space-y-3">
+                            <p><strong class="brand-green">Availability:</strong> We strive for 99.9% uptime for critical observability services, with specific SLAs defined in individual service agreements.</p>
+                            <p><strong class="brand-green">Response Times:</strong> Support response times vary by service tier and will be specified in your service agreement.</p>
+                            <p><strong class="brand-green">HITL Services:</strong> Human oversight response times are defined based on criticality levels and business requirements.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 class="text-xl font-bold text-white mb-3">3. Client Responsibilities</h3>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li>Provide accurate information necessary for service delivery</li>
+                            <li>Maintain appropriate security measures for your systems</li>
+                            <li>Comply with applicable laws and regulations</li>
+                            <li>Notify us promptly of any security incidents or concerns</li>
+                            <li>Provide reasonable access to systems for service delivery</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3 class="text-xl font-bold text-white mb-3">4. Intellectual Property</h3>
+                        <div class="space-y-3">
+                            <p><strong class="brand-green">Client Data:</strong> You retain all rights to your data and intellectual property.</p>
+                            <p><strong class="brand-green">Service IP:</strong> Cloudn8tive retains rights to our methodologies, tools, and general knowledge gained through service delivery.</p>
+                            <p><strong class="brand-green">Confidentiality:</strong> We maintain strict confidentiality of all client information and systems.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 class="text-xl font-bold text-white mb-3">5. Limitation of Liability</h3>
+                        <p>Our liability is limited to the fees paid for services in the 12 months preceding any claim, except in cases of:</p>
+                        <ul class="space-y-2 list-disc list-inside mt-3">
+                            <li>Gross negligence or willful misconduct</li>
+                            <li>Death or personal injury</li>
+                            <li>Breach of confidentiality obligations</li>
+                            <li>Violations of data protection laws</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3 class="text-xl font-bold text-white mb-3">6. Termination</h3>
+                        <div class="space-y-3">
+                            <p><strong class="brand-green">By Client:</strong> 30 days written notice for ongoing services.</p>
+                            <p><strong class="brand-green">By Cloudn8tive:</strong> 60 days written notice, or immediately for breach of terms.</p>
+                            <p><strong class="brand-green">Data Return:</strong> We will securely return or destroy client data within 30 days of termination.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 class="text-xl font-bold text-white mb-3">7. Governing Law</h3>
+                        <p>These terms are governed by the laws of England and Wales. Any disputes will be subject to the exclusive jurisdiction of the English courts.</p>
+                    </section>
+
+                    <section>
+                        <h3 class="text-xl font-bold text-white mb-3">8. Contact Information</h3>
+                        <p><strong class="brand-green">Email:</strong> legal@cloudn8tive.com</p>
+                        <p><strong class="brand-green">Address:</strong> Cloudn8tive LLP, London, United Kingdom</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+    // Analytics Helper Functions
+    function trackEvent(eventName, parameters = {}) {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, parameters);
+        }
+    }
+
+    function trackPageView(pagePath, pageTitle) {
+        if (typeof gtag === 'function') {
+            gtag('config', 'G-GLM3MKHW6G', {
+                page_path: pagePath,
+                page_title: pageTitle
+            });
+        }
+    }
+
+    // Track scroll depth
+    let maxScrollDepth = 0;
+    function trackScrollDepth() {
+        const scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+        if (scrollPercent > maxScrollDepth) {
+            maxScrollDepth = scrollPercent;
+            if (scrollPercent >= 25 && scrollPercent < 50) {
+                trackEvent('scroll_depth', { depth: '25%' });
+            } else if (scrollPercent >= 50 && scrollPercent < 75) {
+                trackEvent('scroll_depth', { depth: '50%' });
+            } else if (scrollPercent >= 75 && scrollPercent < 100) {
+                trackEvent('scroll_depth', { depth: '75%' });
+            } else if (scrollPercent >= 100) {
+                trackEvent('scroll_depth', { depth: '100%' });
+            }
+        }
+    }
+
+    // Track time on page
+    let pageStartTime = Date.now();
+    function trackTimeOnPage() {
+        const timeSpent = Math.round((Date.now() - pageStartTime) / 1000);
+        if (timeSpent >= 30 && timeSpent < 60) {
+            trackEvent('engagement_time', { duration: '30_seconds' });
+        } else if (timeSpent >= 60 && timeSpent < 180) {
+            trackEvent('engagement_time', { duration: '1_minute' });
+        } else if (timeSpent >= 180 && timeSpent < 300) {
+            trackEvent('engagement_time', { duration: '3_minutes' });
+        } else if (timeSpent >= 300) {
+            trackEvent('engagement_time', { duration: '5_minutes_plus' });
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Track initial page view
+        trackEvent('page_view', { page_title: document.title, page_location: window.location.href });
+        
+        // Set up scroll tracking
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(trackScrollDepth, 100);
+        });
+
+        // Set up time tracking
+        setInterval(trackTimeOnPage, 30000); // Track every 30 seconds
+        // --- Data for Services ---
+        const servicesData = [
+            {
+                id: 'ai-observability',
+                icon: 'fa-solid fa-robot',
+                title: 'AI & LLM Observability',
+                challenge: 'Your AI is a black box, making it impossible to manage costs, performance, and risk effectively.',
+                solution: "We implement and manage end-to-end observability solutions, leveraging best-in-class platforms to give you a unified view of your entire AI stack. We go beyond simple metrics to provide actionable insights into performance, token usage, data quality, and security posture. Using OpenTelemetry-compatible frameworks where possible, we help you avoid vendor lock-in and maintain control over your data.",
+                benefits: [
+                    '<strong>Reduce Spiraling Costs:</strong> Proactively monitor token consumption and resource utilization to eliminate waste.',
+                    '<strong>Accelerate Issue Resolution:</strong> Utilize span-level tracing and anomaly detection to slash MTTR and minimize downtime.',
+                    '<strong>Mitigate Critical Risks:</strong> Detect hallucinations, data leakage, prompt injections, and model drift before they impact customers.',
+                    '<strong>Drive Better Business Outcomes:</strong> Correlate technical performance directly with business KPIs like user engagement and revenue.'
+                ],
+                tech: []
+            },
+            {
+                id: 'hitl',
+                icon: 'fa-solid fa-user-check',
+                title: 'Human-in-the-Loop (HITL) Services',
+                challenge: 'Automated systems lack the context, nuance, and ethical judgment required for high-stakes decisions.',
+                solution: "Our professionally managed HITL teams, operating from our BPO center in the Philippines, act as the essential human layer for your AI. They review, validate, and correct AI outputs, manage exceptions, and provide the critical feedback loop needed to continuously improve your models' accuracy and safety.",
+                benefits: [
+                    '<strong>Drastically Improve Accuracy:</strong> Eliminate errors and nonsensical outputs that erode user trust with domain-specific oversight.',
+                    '<strong>Uphold Ethical Standards:</strong> Actively mitigate algorithmic bias and harmful content. Our human moderators ensure your AI aligns with your brand values.',
+                    '<strong>Ensure Regulatory Compliance:</strong> Meet strict legal obligations for data handling and decision-making in regulated industries.',
+                    '<strong>Handle Ambiguity and Edge Cases:</strong> Confidently manage the rare, complex scenarios where pure automation fails.'
+                ],
+                tech: []
+            },
+            {
+                id: 'dr',
+                icon: 'fa-solid fa-server',
+                title: 'Human-Run Disaster Recovery (DR)',
+                challenge: 'Traditional, automated DR plans are brittle and fail when faced with the novel failure modes of modern AI systems.',
+                solution: "We provide expert, human-led disaster recovery services specifically designed for the AI era. When a critical AI system fails, our SRE-led teams don't just execute a script; they actively investigate, diagnose, and adapt the recovery strategy in real-time. This is essential because AI failures are often nuanced and cannot be predicted by static playbooks.",
+                benefits: [
+                    '<strong>Achieve True Resilience:</strong> Protect your most critical, AI-driven revenue streams from catastrophic failure.',
+                    '<strong>Minimize Financial & Reputational Damage:</strong> A robust, tested continuity plan reduces losses and maintains stakeholder confidence.',
+                    '<strong>Address Complex Failure Scenarios:</strong> Our human experts can diagnose unique issues (e.g., poisoned datasets) that automated systems would miss.',
+                    '<strong>Safeguard Your Intellectual Property:</strong> Ensure your recovery plan protects proprietary algorithms, models, and datasets from corruption or loss.'
+                ],
+                tech: []
+            },
+            {
+                id: 'sandboxes',
+                icon: 'fa-solid fa-vial',
+                title: 'Manned AI Sandboxes',
+                challenge: 'Innovating with new AI models is risky, slow, and expensive without a safe, controlled environment.',
+                solution: "We provide secure, fully managed AI sandbox environments where your teams can experiment, develop, and test new models and applications with expert guidance. Our manned sandbox teams help you navigate complex regulatory requirements, ensure security, and validate performance before market release.",
+                benefits: [
+                    '<strong>Accelerate Innovation, Safely:</strong> Drastically reduce time-to-market by testing in a secure environment without impacting production.',
+                    '<strong>Ensure Compliance from Day One:</strong> Develop high-risk AI applications with direct regulatory guidance (e.g., EU AI Act).',
+                    '<strong>Reduce Development Costs:</strong> Leverage our infrastructure and expertise to \'test before you invest\', avoiding high setup costs.',
+                    '<strong>Improve Model Robustness:</strong> Stress-test models against varied conditions and potential adversarial attacks to ensure they are fair and secure.'
+                ],
+                tech: []
+            },
+            {
+                id: 'bpo',
+                icon: 'fa-solid fa-headset',
+                title: 'Managed BPO Services',
+                challenge: 'Scaling essential business functions like customer support and sales administration is costly and distracting.',
+                solution: "We provide a full suite of cost-effective BPO services from our state-of-the-art facility in the Philippines. We handle customer service, sales support, and administrative functions, allowing you to scale your operations 24/7 while maintaining exceptional quality.",
+                benefits: [
+                    '<strong>Cut Operational Costs by up to 50%:</strong> Leverage the significant labor cost advantages of the Philippines to scale your teams, not your budget.',
+                    '<strong>Access a Highly Skilled Workforce:</strong> Tap into a deep talent pool known for high English proficiency and cultural alignment with Western markets.',
+                    '<strong>Enable 24/7 Operations:</strong> Utilize the time zone advantage to provide round-the-clock customer support and back-office processing.',
+                    '<strong>Focus on Your Core Business:</strong> Offload non-core functions to a trusted partner, freeing your key domestic talent to focus on innovation and growth.'
+                ],
+                tech: []
+            },
+            {
+                id: 'devops',
+                icon: 'fa-solid fa-cogs',
+                title: 'DevOps, SRE & Platform Engineering',
+                challenge: 'Building and maintaining the complex, cloud-native infrastructure for modern AI is a highly specialized skill.',
+                solution: "Our expert teams of DevOps, SRE, and Platform Engineers act as an extension of your own. We design, build, and manage the robust, scalable, and reliable platforms your AI applications depend on. We bridge the gap between development speed and operational stability.",
+                benefits: [
+                    '<strong>Increase Release Velocity:</strong> Implement CI/CD pipelines and automation to help your teams ship features faster and more reliably.',
+                    '<strong>Maximize System Reliability:</strong> Apply SRE principles, establishing SLOs and error budgets to ensure systems meet user expectations.',
+                    '<strong>Improve Operational Efficiency:</strong> We automate repetitive tasks and manage your underlying infrastructure, reducing toil for your engineers.',
+                    '<strong>Build for Scale:</strong> We design your platforms for scalability and cost-efficiency, ensuring infrastructure can grow with your business.'
+                ],
+                tech: []
+            }
+        ];
+
+        const servicesGrid = document.querySelector('#services .grid');
+        const modalContainer = document.getElementById('modal-container');
+
+        // --- Populate Service Cards and Modals ---
+        servicesData.forEach(service => {
+            // Create Service Card
+            const card = document.createElement('div');
+            card.className = 'bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-brand-green/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer flex flex-col';
+            card.dataset.modalId = service.id;
+            card.innerHTML = `
+                <div class="flex-grow">
+                    <i class="${service.icon} text-4xl brand-green mb-5"></i>
+                    <h3 class="text-2xl font-bold text-white mb-3">${service.title}</h3>
+                </div>
+                <div class="mt-4">
+                    <span class="font-semibold text-brand-green hover:text-green-300">Learn More &rarr;</span>
+                </div>
+            `;
+            servicesGrid.appendChild(card);
+
+            // Create Modal
+            const modal = document.createElement('div');
+            modal.id = service.id;
+            modal.className = 'modal fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 invisible opacity-0';
+            modal.innerHTML = `
+                <div class="modal-content bg-gray-800 rounded-xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto transform scale-95">
+                    <div class="sticky top-0 bg-gray-800/80 backdrop-blur-sm p-6 flex justify-between items-center border-b border-gray-700">
+                        <h2 class="text-2xl font-bold text-white">${service.title}</h2>
+                        <button class="close-modal text-gray-400 hover:text-white text-2xl">&times;</button>
+                    </div>
+                    <div class="p-8">
+                        <div class="bg-gray-900 p-4 rounded-lg mb-6">
+                            <p class="font-semibold text-gray-300"><strong class="brand-green">The Challenge:</strong> ${service.challenge}</p>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Our Solution</h3>
+                        <p class="text-gray-400 mb-6">${service.solution}</p>
+                        
+                        <h3 class="text-xl font-bold text-white mb-4">Key Business Benefits</h3>
+                        <ul class="space-y-3 text-gray-400 mb-6">
+                            ${service.benefits.map(b => `<li class="flex items-start"><i class="fas fa-check-circle brand-green mt-1 mr-3"></i><span>${b}</span></li>`).join('')}
+                        </ul>
+                        
+                        ${service.tech.length > 0 ? `
+                        <h3 class="text-xl font-bold text-white mb-4">Technologies We Use</h3>
+                        <div class="flex items-center space-x-6">
+                            ${service.tech.map(t => `<span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">${t}</span>`).join('')}
+                        </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+            modalContainer.appendChild(modal);
+        });
+
+        // --- Modal Logic ---
+        document.querySelectorAll('[data-modal-id]').forEach(card => {
+            card.addEventListener('click', () => {
+                const modalId = card.dataset.modalId;
+                const modal = document.getElementById(modalId);
+                
+                // Track service modal open
+                trackEvent('service_modal_open', {
+                    service_id: service.id,
+                    service_name: service.title,
+                    modal_id: modalId
+                });
+                
+                modal.classList.remove('invisible', 'opacity-0');
+                modal.querySelector('.modal-content').classList.remove('scale-95');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Function to add modal close functionality
+        function addModalCloseListeners(modal) {
+            const closeButtons = modal.querySelectorAll('.close-modal');
+            closeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    modal.classList.add('opacity-0');
+                    modal.querySelector('.modal-content').classList.add('scale-95');
+                    setTimeout(() => {
+                        modal.classList.add('invisible');
+                        document.body.style.overflow = 'auto';
+                    }, 300);
+                });
+            });
+            
+            // Click outside to close
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('opacity-0');
+                    modal.querySelector('.modal-content').classList.add('scale-95');
+                    setTimeout(() => {
+                        modal.classList.add('invisible');
+                        document.body.style.overflow = 'auto';
+                    }, 300);
+                }
+            });
+        }
+        
+        // Add close functionality to all existing modals
+        document.querySelectorAll('.modal').forEach(modal => {
+            addModalCloseListeners(modal);
+        });
+
+                // --- Contact Form Logic ---
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formFeedback = document.getElementById('form-feedback');
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+
+            // Track form submission attempt
+            trackEvent('form_submit_attempt', {
+                form_name: 'contact_form',
+                has_company: !!contactForm.company.value,
+                has_phone: !!contactForm.phone.value
+            });
+
+            formFeedback.innerHTML = '<p class="text-brand-green">Sending...</p>';
+            submitButton.disabled = true;
+
+            const formData = {
+                name: contactForm.name.value,
+                email: contactForm.email.value,
+                company: contactForm.company.value,
+                phone: contactForm.phone.value,
+                message: contactForm.message.value,
+            };
+
+            const functionUrl = 'https://contact-form-handler-52n52dhuja-ew.a.run.app';
+
+            fetch(functionUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.text();
+                }
+                throw new Error('Network response was not ok.');
+            })
+            .then(data => {
+                contactForm.reset();
+                formFeedback.innerHTML = '<p class="text-brand-green font-bold">Thank you for your message. We will be in touch shortly!</p>';
+                setTimeout(() => formFeedback.innerHTML = '', 5000);
+                
+                // Track successful form submission
+                trackEvent('form_submit_success', {
+                    form_name: 'contact_form',
+                    conversion: true
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                formFeedback.innerHTML = '<p class="text-red-500">Sorry, there was an error sending your message. Please try again later.</p>';
+                
+                // Track failed form submission
+                trackEvent('form_submit_error', {
+                    form_name: 'contact_form',
+                    error_type: 'network_error'
+                });
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+            });
+        });
+        
+        // --- Mobile Menu Logic ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // --- Header Scroll Effect ---
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-3');
+            } else {
+                header.classList.add('py-3');
+                header.classList.remove('py-2');
+            }
+        });
+
+        // --- Privacy Policy and Terms Modal Logic ---
+        console.log('Script is running...');
+        
+        // Test if elements exist
+        setTimeout(() => {
+            console.log('Looking for elements...');
+            const privacyPolicyLink = document.getElementById('privacy-policy-link');
+            const termsLink = document.getElementById('terms-link');
+            const privacyModal = document.getElementById('privacy-policy-modal');
+            const termsModal = document.getElementById('terms-modal');
+            
+            console.log('Privacy link found:', !!privacyPolicyLink);
+            console.log('Terms link found:', !!termsLink);
+            console.log('Privacy modal found:', !!privacyModal);
+            console.log('Terms modal found:', !!termsModal);
+            
+            if (privacyPolicyLink) {
+                console.log('Adding privacy policy click handler');
+                privacyPolicyLink.addEventListener('click', function(e) {
+                    console.log('Privacy Policy button clicked!');
+                    e.preventDefault();
+                    if (privacyModal) {
+                        privacyModal.style.display = 'flex';
+                        privacyModal.classList.remove('invisible', 'opacity-0');
+                        const modalContent = privacyModal.querySelector('.modal-content');
+                        if (modalContent) {
+                            modalContent.classList.remove('scale-95');
+                        }
+                        document.body.style.overflow = 'hidden';
+                    }
+                    return false;
+                });
+            } else {
+                console.log('Privacy policy link not found!');
+            }
+            
+            if (termsLink) {
+                console.log('Adding terms click handler');
+                termsLink.addEventListener('click', function(e) {
+                    console.log('Terms button clicked!');
+                    e.preventDefault();
+                    if (termsModal) {
+                        termsModal.style.display = 'flex';
+                        termsModal.classList.remove('invisible', 'opacity-0');
+                        const modalContent = termsModal.querySelector('.modal-content');
+                        if (modalContent) {
+                            modalContent.classList.remove('scale-95');
+                        }
+                        document.body.style.overflow = 'hidden';
+                    }
+                    return false;
+                });
+            } else {
+                console.log('Terms link not found!');
+            }
+        }, 500);
+
+        // Track CTA button clicks
+        document.querySelectorAll('a[href="#contact"]').forEach(button => {
+            button.addEventListener('click', () => {
+                const buttonText = button.textContent.trim();
+                trackEvent('cta_click', {
+                    button_text: buttonText,
+                    button_location: button.classList.contains('hidden') ? 'header' : 'hero_section'
+                });
+            });
+        });
+
+        // Track partner logo clicks
+        document.querySelectorAll('.partner-logo').forEach(logo => {
+            logo.parentElement.addEventListener('click', () => {
+                const partnerName = logo.alt || 'Unknown Partner';
+                trackEvent('partner_click', {
+                    partner_name: partnerName,
+                    partner_url: logo.parentElement.href
+                });
+            });
+        });
+
+        // Track navigation link clicks
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', () => {
+                const section = link.getAttribute('href').substring(1);
+                trackEvent('navigation_click', {
+                    section: section,
+                    link_text: link.textContent.trim()
+                });
+            });
+        });
+
+    });
+    </script>
+
+</body>
+</html>
