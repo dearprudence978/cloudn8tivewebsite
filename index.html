@@ -696,6 +696,33 @@
         const servicesGrid = document.querySelector('#services .grid');
         const modalContainer = document.getElementById('modal-container');
 
+        // Function to add modal close functionality
+        function addModalCloseListeners(modal) {
+            const closeButtons = modal.querySelectorAll('.close-modal');
+            closeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    modal.classList.add('opacity-0');
+                    modal.querySelector('.modal-content').classList.add('scale-95');
+                    setTimeout(() => {
+                        modal.classList.add('invisible');
+                        document.body.style.overflow = 'auto';
+                    }, 300);
+                });
+            });
+            
+            // Click outside to close
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('opacity-0');
+                    modal.querySelector('.modal-content').classList.add('scale-95');
+                    setTimeout(() => {
+                        modal.classList.add('invisible');
+                        document.body.style.overflow = 'auto';
+                    }, 300);
+                }
+            });
+        }
+
         // --- Populate Service Cards and Modals ---
         servicesData.forEach(service => {
             // Create Service Card
@@ -745,56 +772,22 @@
                 </div>
             `;
             modalContainer.appendChild(modal);
-        });
 
-        // --- Modal Logic ---
-        document.querySelectorAll('[data-modal-id]').forEach(card => {
+            // Add event listener for this specific card
             card.addEventListener('click', () => {
-                const modalId = card.dataset.modalId;
-                const modal = document.getElementById(modalId);
-                
                 // Track service modal open
                 trackEvent('service_modal_open', {
                     service_id: service.id,
                     service_name: service.title,
-                    modal_id: modalId
+                    modal_id: service.id
                 });
                 
                 modal.classList.remove('invisible', 'opacity-0');
                 modal.querySelector('.modal-content').classList.remove('scale-95');
                 document.body.style.overflow = 'hidden';
             });
-        });
 
-        // Function to add modal close functionality
-        function addModalCloseListeners(modal) {
-            const closeButtons = modal.querySelectorAll('.close-modal');
-            closeButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    modal.classList.add('opacity-0');
-                    modal.querySelector('.modal-content').classList.add('scale-95');
-                    setTimeout(() => {
-                        modal.classList.add('invisible');
-                        document.body.style.overflow = 'auto';
-                    }, 300);
-                });
-            });
-            
-            // Click outside to close
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    modal.classList.add('opacity-0');
-                    modal.querySelector('.modal-content').classList.add('scale-95');
-                    setTimeout(() => {
-                        modal.classList.add('invisible');
-                        document.body.style.overflow = 'auto';
-                    }, 300);
-                }
-            });
-        }
-        
-        // Add close functionality to all existing modals
-        document.querySelectorAll('.modal').forEach(modal => {
+            // Add modal close functionality
             addModalCloseListeners(modal);
         });
 
